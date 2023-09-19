@@ -1,9 +1,9 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
-import Seats from './components/Theater2';
+//import Seats from './components/Theater2';
 import Signup from './components/Signup';
-import Home from './components/Home';
+import Home from './components/home';
 function App() {
   return (
     <div className="App">
