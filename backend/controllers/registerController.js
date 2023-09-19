@@ -1,18 +1,35 @@
-const Register=require("../models/User")
+const User = require("../models/User")
 
-const registerCreate=(req,res)=>{
-Register.create({
-    username:req.body.username,
-    email:req.body.email,
-    password:req.body.password
-})
-.then((data)=>
-{
-    res.status(200).send("registered")
-})
-.catch((err)=>
-{
-    res.send(err)
-})
+const registerCreate = async (req, res) => {
+    console.log(req.body)
+      User.create({
+        username:req.body.username,
+        email:req.body.email,
+        password:req.body.password
+    })
+    .then((data)=>
+    {
+        res.status(200).json({ success: true, message: 'signup successful',data })
+
+    })
+    .catch((err)=>
+    {
+        res.send(err)
+    })
+
+    /*try {
+        const data = await User.create({
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password
+        });
+        if(!data){
+            return res.send("not able to reg")
+        }
+        res.json(data)
+
+    } catch (error) {
+        res.send(error)
+    }*/
 }
-module.exports={registerCreate}
+module.exports = { registerCreate }
