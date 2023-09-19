@@ -1,0 +1,25 @@
+.navbar{
+    background-color: black;
+    color:white;
+    padding: 10px 0;
+  }
+  .container{
+    max-width: 960px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-link{
+    color: rgb(235, 225, 225);
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 25px;
+    margin-left: 120px;
+    
+  }
+  .nav-link:hover{
+  
+    text-decoration: underline;
+  }
