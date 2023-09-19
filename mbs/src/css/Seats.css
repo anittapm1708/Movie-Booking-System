@@ -1,0 +1,67 @@
+.seats-main{
+    text-align:center;
+}
+.seats-type{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    margin-bottom:20px;
+
+}
+.seats-type-na{
+    color: #000000;
+    background-color: #968181;
+}
+.seats-type-av{
+    color: #000000;
+    background-color: #00ff00;
+}
+.seats-type-booked{
+    color: #000000;
+    background-color: #ff0000;
+}
+
+.seat{
+    color:#000000;
+    background-color:pink;
+}
+.theatre{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.seats-type-booked, .seats-type-av, .seats-type-na,.seat{
+    border: 1px solid #361212;
+    border-radius: 10px 10px 0px 0px;
+    
+    width: 40px;
+    height: 50px;
+    margin: 5px;
+}
+.row-no{
+    padding: 5px;
+    width: 0px;
+    height: 25px;
+    margin: 5px 0px;
+
+}
+.theater{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.book-ticket{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:40px;
+}
+.buy-ticket{
+    width:180px;
+    height:50px;
+    font-size:20px;
+}
