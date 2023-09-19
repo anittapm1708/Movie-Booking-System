@@ -1,11 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import Seats from './components/Theater';
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './App.css';
+import Seats from './components/Theater2';
+import Signup from './components/Signup';
+import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-        <Seats/>
+      
+        <div className="App">
+          <div className="container">
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Signup/>}/>
+                <Route path="/Home" element={<Home/>}/>
+              </Routes>
+            </BrowserRouter>
+          </div>
+        </div>
+      
     </div>
   );
 }
