@@ -50,7 +50,7 @@ const Signup=()=>{
             <label>Email</label>
             <input required type='text' value={email}  onChange={(e)=>setEmail(e.target.value)}/>
             <label>Password</label>
-            <input required type='text' value={password}  onChange={(e)=>setPassword(e.target.value)}/>
+            <input required type='password' value={password}  onChange={(e)=>setPassword(e.target.value)}/>
             <button type='submit'>Signup</button>
             <p>Already Created ?<a href="/login">Login</a></p>
           </form>
