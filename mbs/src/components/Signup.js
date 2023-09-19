@@ -1,10 +1,11 @@
 import {  useState } from 'react';
-import '../signup.css'
+import { useNavigate } from 'react-router-dom';
+import './signup.css'
 const Signup=()=>{
     const [email,setEmail]=useState("");
     const [username,setUsername]=useState("");
     const [password,setPassword]=useState("")
-
+     const navigate=useNavigate();
     const handleSubmit=(event)=>
     {
         event.preventDefault()
@@ -41,6 +42,10 @@ const Signup=()=>{
         .catch((err)=>{
           console.error('error:',err)
         })
+        
+    }
+    const handleSignUp=()=>{
+      navigate("/Home");
     }
     return (
         <div>
@@ -51,7 +56,7 @@ const Signup=()=>{
             <input required type='text' value={email}  onChange={(e)=>setEmail(e.target.value)}/>
             <label>Password</label>
             <input required type='password' value={password}  onChange={(e)=>setPassword(e.target.value)}/>
-            <button type='submit'>Signup</button>
+            <button type='submit' onClick={handleSignUp}>Signup</button>
             <p>Already Created ?<a href="/login">Login</a></p>
           </form>
         </div>
